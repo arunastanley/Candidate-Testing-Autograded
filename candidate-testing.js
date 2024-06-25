@@ -40,7 +40,17 @@ function askQuestion() {
 
 for (let i= 0; i <= 4; i++){
   candidateAnswers[i] = input.question(questions[i]);
+  if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
+    console.log(`Your answer "${candidateAnswers[i]}" is correct
+    `);
+}else{
+    console.log(`Your answer "${candidateAnswers[i]}" is wrong`);
+    console.log(`Correct Answer:   ${correctAnswers[i]}
+    `);
 }
+
+
+  }
 
 }
 
@@ -65,7 +75,8 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello "+ candidateName);
+   console.log(`Hello ${candidateName}
+   `);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }

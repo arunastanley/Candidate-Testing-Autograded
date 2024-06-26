@@ -38,7 +38,7 @@ function askQuestion() {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 //candidateAnswer = input.question(question);
 
-for (let i= 0; i <= 4; i++){
+for (let i= 0; i < questions.length; i++){
   candidateAnswers[i] = input.question(questions[i]);
   if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
     console.log(`Your answer "${candidateAnswers[i]}" is correct
@@ -67,7 +67,7 @@ function gradeQuiz(candidateAnswers) {
 */
   let totalScore = 0;
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-  for (let i= 0; i <= 4; i++){
+  for (let i= 0; i < correctAnswers.length; i++){
     if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()){
             totalScore += 1;
   }
